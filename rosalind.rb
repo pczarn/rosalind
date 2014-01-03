@@ -1,13 +1,6 @@
-class Integer
-  # binomial coefficient: n C k
-  def choose(k)
-    # n!/(n-k)!
-    pTop = (self-k+1 .. self).inject(1, &:*)
-    # k!
-    pBottom = (2 .. k).inject(1, &:*)
-    pTop / pBottom
-  end
-end
+require_relative "protein"
+require_relative "fasta"
+require_relative "util"
 
 def dna(s)
 
@@ -80,6 +73,8 @@ end
 def tran(str1, str2)
 
 end
+
+# Suggested problems
 
 def protstruct(points)
 
